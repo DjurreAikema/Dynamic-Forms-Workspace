@@ -11,7 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "ngx-dynamic-forms": [
-        "./dist/ngx-dynamic-forms"
+        "./dist/ngx-dynamic-forms",
+        "./projects/ngx-dynamic-forms/src/public-api.ts"
       ]
     },
     "skipLibCheck": true,
