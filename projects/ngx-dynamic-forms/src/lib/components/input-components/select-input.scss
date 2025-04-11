@@ -1,0 +1,22 @@
+.select-input {
+  display: block;
+}
+
+.select-search {
+  box-sizing: border-box;
+
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  width: 100%;
+  font-size: inherit;
+
+  padding: 12px;
+  color: gray;
+  background-color: white;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.select-option {
+  font-size: inherit;
+}

@@ -1,0 +1,44 @@
+input {
+  all: unset;
+}
+
+[aria-disabled="true"] {
+  background-color: rgb(233, 236, 239);
+  color: rgb(108, 117, 128);
+
+  border: none !important;
+  outline: none !important;
+}
+
+*:disabled {
+  background-color: rgb(233, 236, 239);
+  color: rgb(108, 117, 128);
+}
+
+.element-input {
+  box-sizing: border-box;
+
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: inherit;
+
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
+  padding: 3px 15px;
+}
+
+.element-input:focus:not(.ng-invalid) {
+  border: 1px solid rgb(128, 189, 255);
+  outline: 2px solid rgb(128, 189, 255, 0.5);
+}
+
+
+// --- Validation --- //
+.ng-invalid:not(div, lib-dynamic-autocomplete) {
+  border: 1px solid rgb(169, 68, 66);
+}
+
+.ng-invalid:focus:not(div, lib-dynamic-autocomplete) {
+  outline: 2px solid rgb(169, 68, 66, 0.5);
+}

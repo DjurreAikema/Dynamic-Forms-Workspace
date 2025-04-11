@@ -1,0 +1,72 @@
+<div class="element" *ngIf="element && element.formControl && element.controlType != ControlTypeEnum.HIDDEN && element.visible"
+     [style.flex-flow]="rowStyle.flexFlow" [style.gap]="rowStyle.gap" [style.flex]="rowStyle.flex"
+     [style.font-size]="rowStyle.fontSize" [style.color]="rowStyle.fontColor"
+     [style.height]="rowStyle.height" [style.width]="rowStyle.width">
+
+    <!-- Element label -->
+    <element-label class="element-label" *ngIf="!noLabel" [element]="element" [labelStyle]="labelStyle"
+                   [style.flex]="labelStyle.flex"></element-label>
+
+    <!-- Switch case for control type -->
+    <ng-container [ngSwitch]="element.controlType" [style.font-size]="'inherit'">
+
+        <!-- Text -->
+        <input-text class="element-input" *ngSwitchCase="ControlTypeEnum.TEXT" [element]="toText(element)"
+                    [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-text>
+
+        <!-- Number -->
+        <input-number class="element-input" *ngSwitchCase="ControlTypeEnum.NUMBER" [element]="toNumber(element)"
+                      [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-number>
+
+        <!-- Datetime -->
+        <input-datetime class="element-input" *ngSwitchCase="ControlTypeEnum.DATETIME" [element]="toDatetime(element)"
+                        [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-datetime>
+
+        <!-- Date -->
+        <input-date class="element-input" *ngSwitchCase="ControlTypeEnum.DATE" [element]="toDate(element)"
+                    [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-date>
+
+        <!-- Text label -->
+        <input-text-label class="element-input" *ngSwitchCase="ControlTypeEnum.TEXT_LABEL" [element]="toTextLabel(element)"
+                          [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-text-label>
+
+        <!-- Textarea -->
+        <input-textarea class="element-input" *ngSwitchCase="ControlTypeEnum.TEXTAREA" [element]="toTextarea(element)"
+                        [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-textarea>
+
+        <!-- Checkbox -->
+        <input-checkbox class="element-input" *ngSwitchCase="ControlTypeEnum.CHECKBOX" [element]="toCheckbox(element)"
+                        [inputStyle]="inputStyle" [style.flex]="inputStyle.flex" [style.text-align]="inputStyle.checkboxAlign"></input-checkbox>
+
+        <!-- Radio group -->
+        <input-radio-group class="element-input" *ngSwitchCase="ControlTypeEnum.RADIO_GROUP" [element]="toRadioGroup(element)"
+                           [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-radio-group>
+
+        <!-- Id select -->
+        <input-id-select class="element-input select-input" *ngSwitchCase="ControlTypeEnum.ID_SELECT" [element]="toIdSelect(element)"
+                         [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-id-select>
+
+        <!-- Object select -->
+        <input-object-select class="element-input select-input" *ngSwitchCase="ControlTypeEnum.OBJECT_SELECT" [element]="toObjectSelect(element)"
+                             [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-object-select>
+
+        <!-- Codelist select -->
+        <input-codelist-select class="element-input select-input" *ngSwitchCase="ControlTypeEnum.CODELIST_SELECT" [element]="toCodeListSelect(element)"
+                               [inputStyle]="inputStyle" [style.flex]="inputStyle.flex"></input-codelist-select>
+
+    </ng-container>
+
+</div>
+
+<div class="element-debug" *ngIf="debugMode">
+    <div><b>KEY:</b> {{ element.key }}</div>
+    <div><b>TYPE:</b> {{ element.controlType }}</div>
+    <div><b>GRP:</b> {{ element.inputGroup }}</div>
+    <div><b>VIS:</b> {{ element.visible }}</div>
+    <div><b>STA:</b> {{ element.formControl.status }}</div>
+    <div><b>VAL:</b> {{ element.formControl.getRawValue() | json }}</div>
+
+    <div class="debug-errors" *ngIf="element.formControl.errors">
+        <b>ERR:</b> {{ element.formControl.errors | json }}
+    </div>
+</div>

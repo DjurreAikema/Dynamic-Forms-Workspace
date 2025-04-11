@@ -1,0 +1,91 @@
+.row-column {
+}
+
+.row-edit-column {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.row-edit-column-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.localEditToken-debug {
+  font-size: 10px;
+  text-align: center;
+}
+
+
+// --- Buttons --- //
+.standard-button {
+  width: 32.5px;
+  height: 32.5px;
+  font-size: 14px;
+  font-weight: 550;
+
+  border-radius: 3px;
+  border: none;
+}
+
+.standard-button:hover {
+  background-color: rgb(226, 230, 234);
+  cursor: pointer;
+}
+
+.standard-button:focus {
+  outline: 2px solid rgb(240, 240, 240, 0.4);
+}
+
+.standard-button:active {
+  background-color: rgb(226, 230, 234, 0.8);
+  cursor: pointer;
+}
+
+.standard-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.table-row-success-btn {
+  @extend .standard-button;
+  margin-right: 5px;
+  background-color: rgb(40, 167, 69);
+  color: white;
+}
+
+.table-row-success-btn:hover {
+  background-color: rgb(33, 136, 56);
+}
+
+.table-row-success-btn:focus {
+  outline: 2px solid rgb(40, 167, 69, 0.4);
+}
+
+.table-row-success-btn:active {
+  background-color: rgb(33, 136, 56, 0.8);
+}
+
+.table-row-danger-btn {
+  @extend .standard-button;
+  background-color: rgb(220, 53, 69);
+  color: white;
+}
+
+.table-row-danger-btn:hover {
+  background-color: rgb(200, 35, 51);
+}
+
+.table-row-danger-btn:focus {
+  outline: 2px solid rgb(220, 53, 69, 0.4);
+}
+
+.table-row-danger-btn:active {
+  background-color: rgb(200, 35, 51, 0.8);
+}
+
+.ml-5 {
+  margin-left: 5px;
+}

@@ -1,0 +1,51 @@
+.element {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.element-label {
+  box-sizing: border-box;
+  align-self: center;
+
+  min-width: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-input {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-shrink: 0;
+}
+
+.select-input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-debug {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  background-color: rgba(169, 68, 66, .1);
+  border: 1px solid rgb(169, 68, 66);
+  border-radius: 3px;
+
+  margin-top: 3px;
+  padding: 0 5px;
+
+  font-size: 12px;
+}
+
+.element-debug > * {
+  min-width: 100px;
+  margin-right: 5px;
+}
+
+.debug-errors {
+  flex-basis: 100%;
+}
