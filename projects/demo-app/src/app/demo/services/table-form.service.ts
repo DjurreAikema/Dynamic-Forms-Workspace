@@ -31,12 +31,13 @@ export class TableFormService extends DynamicTableService {
 
     // Configure column widths
     this.columnWidths = {
+      id: '10%',
       firstName: '15%',
       lastName: '15%',
-      email: '25%',
+      email: '20%',
       age: '10%',
       active: '10%',
-      hireDate: '15%'
+      hireDate: '10%'
     };
 
     // Configure column alignment

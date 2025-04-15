@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {DynamicTableService} from "ngx-dynamic-forms";
+import {TableFormService} from "../services/table-form.service";
 
 @Component({
   selector: 'app-table-forms',
@@ -30,11 +30,8 @@ import {DynamicTableService} from "ngx-dynamic-forms";
                   </mat-card-subtitle>
               </mat-card-header>
               <mat-card-content>
-                  <dynamic-form-table
-                          [service]="tableService"
-                          (itemCount)="updateItemCount($event)"
-                          (hideTable)="hideTable = $event"
-                          [disableNewBtn]="readOnly"  >
+                  <dynamic-form-table [service]="tableService" [disableNewBtn]="readOnly"
+                                      (itemCount)="updateItemCount($event)" (hideTable)="hideTable = $event">
                   </dynamic-form-table>
 
                   <div *ngIf="hideTable" class="no-data">
@@ -57,6 +54,10 @@ import {DynamicTableService} from "ngx-dynamic-forms";
     .table-forms-container {
       max-width: 1000px;
       margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 20px;
     }
 
     .controls {
@@ -84,9 +85,9 @@ export class TableFormsComponent {
   hideTable: boolean = false;
   selectedRow: any = null;
 
-  constructor(public tableService: DynamicTableService) {
+  constructor(public tableService: TableFormService) {
     // Subscribe to selected row changes
-    this.tableService.selectedRow$.subscribe(row => {
+    this.tableService.selectedRow$.subscribe((row: any) => {
       this.selectedRow = row;
     });
   }

@@ -9,11 +9,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 
 import {DynamicFormsModule, DynamicTableService} from 'ngx-dynamic-forms';
-import {BasicFormsComponent} from './components/basic-forms/basic-forms.component';
-import {TableFormsComponent} from './components/table-forms/table-forms.component';
 import {DemoComponent} from './demo.component';
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 import {TableFormService} from "./services/table-form.service";
+import {BasicFormsComponent} from "./components/basic-forms.component";
+import {TableFormsComponent} from "./components/table-forms.component";
 
 const routes: Routes = [
   {

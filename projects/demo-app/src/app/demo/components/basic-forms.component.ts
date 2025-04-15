@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BasicFormService} from '../../services/basic-form.service';
 import {FormElementBase} from 'ngx-dynamic-forms';
+import {BasicFormService} from "../services/basic-form.service";
 
 @Component({
   selector: 'app-basic-forms',
@@ -89,6 +89,10 @@ import {FormElementBase} from 'ngx-dynamic-forms';
     .basic-forms-container {
       max-width: 800px;
       margin: 0 auto;
+    }
+    
+    h2 {
+      margin-top: 20px;
     }
 
     .controls {
