@@ -7,13 +7,15 @@ import {
   FormElementNumber,
   FormElementDate,
   FormElementCheckbox,
-  InputControlService
+  InputControlService, FormElementHidden
 } from 'ngx-dynamic-forms';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TableFormService extends DynamicTableService {
+
+  public override parentIdRequired: boolean = false;
   public override tableName: string = 'Users Table';
   public override debugMode: WritableSignal<boolean> = signal(false);
   public override readOnly: WritableSignal<boolean> = signal(false);
@@ -31,7 +33,6 @@ export class TableFormService extends DynamicTableService {
 
     // Configure column widths
     this.columnWidths = {
-      id: '10%',
       firstName: '15%',
       lastName: '15%',
       email: '20%',
@@ -49,7 +50,7 @@ export class TableFormService extends DynamicTableService {
 
   public override getElements(): FormElementBase[] {
     return [
-      new FormElementNumber('id', 'ID')
+      new FormElementHidden('id', 'ID')
         .setVisible(false),
 
       new FormElementText('firstName', 'First Name')

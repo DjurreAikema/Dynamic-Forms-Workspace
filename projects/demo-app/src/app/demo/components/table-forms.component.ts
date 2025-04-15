@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {TableFormService} from "../services/table-form.service";
+import {FormTableComponent} from "ngx-dynamic-forms";
 
 @Component({
   selector: 'app-table-forms',
@@ -80,15 +81,25 @@ import {TableFormService} from "../services/table-form.service";
     }
   `]
 })
-export class TableFormsComponent {
+export class TableFormsComponent implements AfterViewInit {
   itemCount: number = 0;
   hideTable: boolean = false;
   selectedRow: any = null;
+
+  @ViewChild(FormTableComponent) tableComponent?: FormTableComponent;
 
   constructor(public tableService: TableFormService) {
     // Subscribe to selected row changes
     this.tableService.selectedRow$.subscribe((row: any) => {
       this.selectedRow = row;
+    });
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      if (this.tableComponent) {
+        this.tableComponent.load();
+      }
     });
   }
 
@@ -109,9 +120,8 @@ export class TableFormsComponent {
   }
 
   reloadTable() {
-    const tableElement = document.querySelector('dynamic-form-table') as any;
-    if (tableElement && tableElement.load) {
-      tableElement.load();
+    if (this.tableComponent) {
+      this.tableComponent.load();
     }
   }
 

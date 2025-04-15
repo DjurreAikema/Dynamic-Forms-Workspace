@@ -75,7 +75,7 @@ import {BasicFormService} from "../services/basic-form.service";
               </mat-card-content>
           </mat-card>
 
-          <mat-expansion-panel *ngIf="formValid() || debugMode()">
+          <mat-expansion-panel>
               <mat-expansion-panel-header>
                   <mat-panel-title>
                       Form Data
