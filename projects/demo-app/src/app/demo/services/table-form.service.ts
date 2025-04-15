@@ -11,7 +11,7 @@ import {
 } from 'ngx-dynamic-forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TableFormService extends DynamicTableService {
   public override tableName: string = 'Users Table';

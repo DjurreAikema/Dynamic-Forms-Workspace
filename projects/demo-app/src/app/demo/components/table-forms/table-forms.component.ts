@@ -33,7 +33,8 @@ import {DynamicTableService} from "ngx-dynamic-forms";
                   <dynamic-form-table
                           [service]="tableService"
                           (itemCount)="updateItemCount($event)"
-                          (hideTable)="hideTable = $event">
+                          (hideTable)="hideTable = $event"
+                          [disableNewBtn]="readOnly"  >
                   </dynamic-form-table>
 
                   <div *ngIf="hideTable" class="no-data">

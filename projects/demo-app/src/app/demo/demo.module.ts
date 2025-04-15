@@ -8,11 +8,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 
-import {DynamicFormsModule} from 'ngx-dynamic-forms';
+import {DynamicFormsModule, DynamicTableService} from 'ngx-dynamic-forms';
 import {BasicFormsComponent} from './components/basic-forms/basic-forms.component';
 import {TableFormsComponent} from './components/table-forms/table-forms.component';
 import {DemoComponent} from './demo.component';
 import {MatSlideToggle} from "@angular/material/slide-toggle";
+import {TableFormService} from "./services/table-form.service";
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     MatDividerModule,
     MatExpansionModule,
     MatSlideToggle
+  ],
+  providers: [
+    // Provide concrete implementation for abstract service
+    {provide: DynamicTableService, useClass: TableFormService}
   ]
 })
 export class DemoModule {
