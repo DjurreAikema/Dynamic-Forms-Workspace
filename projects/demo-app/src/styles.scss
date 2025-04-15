@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+/* Table styling */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-table th,
+.form-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.form-table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Button styling for table edit */
+.table-row-success-btn,
+.table-row-danger-btn {
+  margin: 0 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.table-row-success-btn {
+  background-color: #4caf50;
+}
+
+.table-row-danger-btn {
+  background-color: #f44336;
+}
+
+.table-row-success-btn:hover {
+  background-color: #3e8e41;
+}
+
+.table-row-danger-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* For new button in tables */
+.new-button {
+  background-color: #2196f3;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-button:hover {
+  background-color: #0b7dda;
+}
+
+/* For fontawesome icons in buttons */
+.fa-solid {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.fa-pen:before {
+  content: "✏️";
+}
+
+.fa-floppy-disk:before {
+  content: "💾";
+}
+
+.fa-trash:before {
+  content: "🗑️";
+}
+
+.fa-plus:before {
+  content: "➕";
+}
+
+.fa-right-from-bracket:before {
+  content: "⤴️";
+}
