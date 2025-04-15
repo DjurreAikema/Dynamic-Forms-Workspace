@@ -1,20 +1,16 @@
 import {Component, Input} from '@angular/core';
-import {ControlTypeEnum} from "ngx-dynamic-forms";
+import {InputStyle, LabelStyle, RowStyle} from "../../interfaces";
+import {ControlTypeEnum} from '../../enums/control-type.enum';
 import {
-  FormElementCheckbox,
-  FormElementCodelistSelect,
+  FormElementCheckbox, FormElementCodelistSelect,
   FormElementDate,
-  FormElementDatetime,
-  FormElementIdSelect,
+  FormElementDatetime, FormElementIdSelect,
   FormElementInputBase,
-  FormElementNumber,
-  FormElementObjectSelect,
-  FormElementRadioGroup,
+  FormElementNumber, FormElementObjectSelect, FormElementRadioGroup,
   FormElementText,
   FormElementTextarea,
   FormElementTextLabel
-} from "ngx-dynamic-forms";
-import {InputStyle, LabelStyle, RowStyle} from "../../interfaces";
+} from '../../form-classes';
 
 @Component({
   selector: 'form-element',

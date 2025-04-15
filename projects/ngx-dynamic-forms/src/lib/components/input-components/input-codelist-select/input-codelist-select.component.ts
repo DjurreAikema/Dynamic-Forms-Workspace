@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {FormElementCodelistSelect} from "ngx-dynamic-forms";
-import {ControlTypeEnum} from "ngx-dynamic-forms";
 import {Observable} from "rxjs";
-import {InputStyle} from "ngx-dynamic-forms";
+import {ControlTypeEnum} from '../../../enums/control-type.enum';
+import {FormElementCodelistSelect} from '../../../form-classes';
+import {InputStyle} from '../../../interfaces';
 
 @Component({
   selector: 'input-codelist-select',

@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {FormElementInputBase} from "ngx-dynamic-forms";
 import {LabelStyle} from "../../interfaces";
+import {FormElementInputBase} from '../../form-classes';
 
 @Component({
   selector: 'element-label',

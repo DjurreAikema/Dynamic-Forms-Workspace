@@ -1,10 +1,10 @@
 // noinspection AngularUndefinedTag
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {DynamicTableService} from "ngx-dynamic-forms";
-import {ControlTypeEnum} from "ngx-dynamic-forms";
 import {InputStyle, LabelStyle, RowStyle, TableRemove, TableRowStyle} from "../../interfaces";
-import {FormElementBase, FormElementCollection} from "ngx-dynamic-forms";
+import {DynamicTableService} from '../../services/dynamic-table.service';
+import {FormElementBase, FormElementCollection} from '../../form-classes';
+import {ControlTypeEnum} from '../../enums/control-type.enum';
 
 @Component({
   selector: '[form-table-row]',

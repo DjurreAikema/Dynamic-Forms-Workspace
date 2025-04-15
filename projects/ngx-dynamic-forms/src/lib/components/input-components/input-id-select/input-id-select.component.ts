@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {FormElementIdSelect} from "ngx-dynamic-forms";
-import {ControlTypeEnum} from "ngx-dynamic-forms";
-import {InputStyle} from "ngx-dynamic-forms";
+import {ControlTypeEnum} from '../../../enums/control-type.enum';
+import {InputStyle} from '../../../interfaces';
+import {FormElementIdSelect} from '../../../form-classes';
 
 @Component({
   selector: 'input-id-select',

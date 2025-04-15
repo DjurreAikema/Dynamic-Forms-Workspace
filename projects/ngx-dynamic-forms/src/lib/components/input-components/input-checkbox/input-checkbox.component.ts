@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {FormElementCheckbox} from "ngx-dynamic-forms";
-import {ControlTypeEnum} from "ngx-dynamic-forms";
-import {InputStyle} from "ngx-dynamic-forms";
+import {ControlTypeEnum} from '../../../enums/control-type.enum';
+import {FormElementCheckbox} from '../../../form-classes';
+import {InputStyle} from '../../../interfaces';
 
 @Component({
   selector: 'input-checkbox',
