@@ -13,12 +13,12 @@ import {Component} from '@angular/core';
               <mat-tab-group>
                   <mat-tab label="Basic Forms">
                       <div class="tab-content">
-                          <router-outlet></router-outlet>
+                          <app-basic-forms/>
                       </div>
                   </mat-tab>
                   <mat-tab label="Table Forms">
                       <div class="tab-content">
-                          <router-outlet></router-outlet>
+                          <app-table-forms/>
                       </div>
                   </mat-tab>
               </mat-tab-group>
