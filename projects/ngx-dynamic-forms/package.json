@@ -1,10 +1,10 @@
 {
   "name": "daikema-dynamic-forms-angular",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "peerDependencies": {
-    "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.7",
-    "@angular/material": "^19.2.9"
+    "@angular/common": "^18.0.0 || ^19.2.0",
+    "@angular/core": "^18.0.0 || ^19.2.7",
+    "@angular/material": "^18.0.0 || ^19.2.9"
   },
   "dependencies": {
     "tslib": "^2.3.0"
