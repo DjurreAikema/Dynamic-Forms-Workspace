@@ -1,10 +1,9 @@
 {
-  "name": "ngx-dynamic-forms",
-  "version": "0.0.1",
+  "name": "daikema-dynamic-forms-angular",
+  "version": "1.2.3",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
-    "@angular/core": "^19.2.0",
-    "@angular/forms": "^19.2.0",
+    "@angular/core": "^19.2.7",
     "@angular/material": "^19.2.9"
   },
   "dependencies": {

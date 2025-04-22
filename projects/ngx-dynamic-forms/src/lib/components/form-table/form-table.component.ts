@@ -176,6 +176,7 @@ export class FormTableComponent implements OnInit, OnDestroy {
     if (this.service.parentId$)
       this._subscriptions["parentChanges"] = this.service.parentId$.subscribe((parentId: number | null): void => {
         if (parentId) this.parentId = parentId;
+        else this.parentId = undefined;
         this.load();
       });
   }
